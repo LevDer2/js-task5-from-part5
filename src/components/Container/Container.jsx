@@ -2,7 +2,7 @@ import styles from "./Container.module.css";
 
 function Container({children}) {
     return (
-        <div>{children}</div>
+        <div className={styles.container}>{children}</div>
     )
 }
 

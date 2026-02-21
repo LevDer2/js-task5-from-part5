@@ -1,4 +1,7 @@
-import { Fragment } from "react/jsx-runtime";
+import { MdPlace } from "react-icons/md";
+import { FaPerson } from "react-icons/fa6";
+import { FaRegCalendarTimes, FaRegCalendarPlus} from "react-icons/fa";
+import { RiVipDiamondFill } from "react-icons/ri";
 import styles from "./Ulist.module.css";
 
 function Ulist({ prop }) {
@@ -9,14 +12,14 @@ function Ulist({ prop }) {
         return (
           <li key={index}>
             <h3>{name}</h3>
-            <p>{location}</p>
-            <p>{speaker}</p>
-            <p>{type}</p>
+            <p><MdPlace /> {location}</p>
+            <p><FaPerson /> {speaker}</p>
+            <p><RiVipDiamondFill /> {type}</p>
             {times.map(({start, end}) => {
               return (
                 <>
-                  <p>{start}</p>
-                  <p>{end}</p>
+                  <p><FaRegCalendarTimes /> {start}</p>
+                  <p><FaRegCalendarPlus/> {end}</p>
                 </>
               );
             })}
