@@ -10,7 +10,7 @@ function Ulist({ prop }) {
       {prop.map(({ name, location, speaker, type, time }, index) => {
          const times = Array.isArray(time) ? time : time ? [time] : [];
         return (
-          <li key={index}>
+          <li key={index}  className={styles.list}>
             <h3>{name}</h3>
             <p><MdPlace /> {location}</p>
             <p><FaPerson /> {speaker}</p>

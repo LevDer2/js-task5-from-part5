@@ -3,8 +3,7 @@
   margin-right: 150px;
   margin-left: 150px;
   background-color: grey;
-  grid-template-columns: repeat(3, 1fr);
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 50px;
 }
