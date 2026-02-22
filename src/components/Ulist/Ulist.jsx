@@ -11,7 +11,7 @@ function Ulist({ prop }) {
          const times = Array.isArray(time) ? time : time ? [time] : [];
         return (
           <li key={index}  className={styles.list}>
-            <h3>{name}</h3>
+            <h3 className={styles.caption}>{name}</h3>
             <p><MdPlace /> {location}</p>
             <p><FaPerson /> {speaker}</p>
             <p><RiVipDiamondFill /> {type}</p>

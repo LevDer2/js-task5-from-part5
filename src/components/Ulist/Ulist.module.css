@@ -1,6 +1,14 @@
 .list {
-    border: 1px solid orange;
-    background-color: yellow;
-    padding-right: 50px;
-    /* margin-right: 50px; */
+  border: 1px solid orange;
+  background-color: yellow;
+  padding-right: 50px;
+  list-style: none;
+  /* margin-right: 50px; */
+}
+
+.caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
