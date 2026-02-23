@@ -1,7 +1,7 @@
-import styles from "./PageBoard.module.css";
+import { Container } from "./PageBoard.style";
 
 function PageBoard({ children }) {
-  return <div className={styles.container}>{children}</div>;
+  return <Container>{children}</Container>;
 }
 
 export default PageBoard;

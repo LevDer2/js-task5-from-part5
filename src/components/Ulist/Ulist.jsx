@@ -2,28 +2,21 @@ import { MdPlace } from "react-icons/md";
 import { FaPerson } from "react-icons/fa6";
 import { FaRegCalendarTimes, FaRegCalendarPlus} from "react-icons/fa";
 import { RiVipDiamondFill } from "react-icons/ri";
-import styles from "./Ulist.module.css";
+import {List, Caption} from "./Ulist.style"
 
 function Ulist({ prop }) {
   return (
     <>
       {prop.map(({ name, location, speaker, type, time }, index) => {
-         const times = Array.isArray(time) ? time : time ? [time] : [];
         return (
-          <li key={index}  className={styles.list}>
-            <h3 className={styles.caption}>{name}</h3>
+          <List key={index}>
+            <Caption>{name}</Caption>
             <p><MdPlace /> {location}</p>
             <p><FaPerson /> {speaker}</p>
             <p><RiVipDiamondFill /> {type}</p>
-            {times.map(({start, end}) => {
-              return (
-                <>
-                  <p><FaRegCalendarTimes /> {start}</p>
-                  <p><FaRegCalendarPlus/> {end}</p>
-                </>
-              );
-            })}
-          </li>
+                  <p><FaRegCalendarTimes /> {time.start}</p>
+                  <p><FaRegCalendarPlus/> {time.end}</p>
+          </List>
         );
       })}
     </>

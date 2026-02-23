@@ -1,8 +1,8 @@
-import styles from "./Caption.module.css";
+import { Captio } from "./Caption.style"
 
 function Caption({title}) {
     return(
-        <h1 className={styles.caption}>{title}</h1>
+        <Captio>{title}</Captio>
     )
 }
 
